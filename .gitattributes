@@ -1,2 +1,4 @@
 app/* linguist-documentation=false
 app/* linguist-vendored
+*.flutter linguist-detectable=true
+*.C++ linguist-detectable=false
