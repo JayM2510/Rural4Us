@@ -1,2 +1,2 @@
-*.flutter linguist-detectable=true
-*.c++ linguist-detectable=false
+# Direct Flutter
+*.* linguist-language=Flutter
