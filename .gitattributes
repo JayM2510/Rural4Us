@@ -1,2 +1,2 @@
-# Direct Flutter
-*.* linguist-language=Flutter
+*.Flutter linguist-detectable=true
+*.* linguist-detectable=false
