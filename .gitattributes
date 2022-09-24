@@ -1,2 +1,2 @@
-*.Flutter linguist-detectable=true
+*.Dart linguist-detectable=true
 *.* linguist-detectable=false
