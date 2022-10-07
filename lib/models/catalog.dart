@@ -1,12 +1,6 @@
 import 'dart:convert';
 
 class CatalogModel {
-  static final catModel = CatalogModel._internal();
-
-CatalogModel._internal();
-
-factory CatalogModel() => catModel;
-
    static late List<Item> items;
 
     Item getById(int id) =>
@@ -64,6 +58,7 @@ class Item {
   }
 
   factory Item.fromMap(Map<String, dynamic> map) {
+    
     return Item(
       id: map['id'] as int,
       name: map['name'] as String,
