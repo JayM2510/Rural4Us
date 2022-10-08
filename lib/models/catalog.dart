@@ -47,7 +47,7 @@ class Item {
   }
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
+    return {
       'id': id,
       'name': name,
       'desc': desc,
@@ -58,20 +58,19 @@ class Item {
   }
 
   factory Item.fromMap(Map<String, dynamic> map) {
-    
     return Item(
-      id: map['id'] as int,
-      name: map['name'] as String,
-      desc: map['desc'] as String,
-      price: map['price'] as num,
-      color: map['color'] as String,
-      image: map['image'] as String,
+      id: map['id'],
+      name: map['name'],
+      desc: map['desc'],
+      price: map['price'],
+      color: map['color'],
+      image: map['image'],
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory Item.fromJson(String source) => Item.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory Item.fromJson(String source) => Item.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -79,16 +78,16 @@ class Item {
   }
 
   @override
-  bool operator ==(covariant Item other) {
-    if (identical(this, other)) return true;
-  
-    return 
-      other.id == id &&
-      other.name == name &&
-      other.desc == desc &&
-      other.price == price &&
-      other.color == color &&
-      other.image == image;
+  bool operator ==(Object o) {
+    if (identical(this, o)) return true;
+
+    return o is Item &&
+        o.id == id &&
+        o.name == name &&
+        o.desc == desc &&
+        o.price == price &&
+        o.color == color &&
+        o.image == image;
   }
 
   @override
