@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_catalog/core/store.dart';
-import 'package:flutter_catalog/models/cart.dart';
 import 'dart:convert';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/utils/routes.dart';
@@ -16,6 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  
   @override
   void initState() {
     super.initState();
@@ -31,31 +31,23 @@ class _HomePageState extends State<HomePage> {
     CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
+    (VxState.store as MyStore).items = CatalogModel.items;
     setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-      final _cart = (VxState.store as MyStore).cart;
+    final MyStore store = VxState.store;
     return Scaffold(
         backgroundColor: context.canvasColor,
-        floatingActionButton:  VxBuilder(
-          mutations: {AddMutation, RemoveMutation},
-          builder: (ctx,_,status) => FloatingActionButton(
-            onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-            backgroundColor: context.theme.buttonColor,
-            child: Icon(
-              CupertinoIcons.cart,
-              color: Colors.white,
-            ),
-          ).badge(
-              color: Vx.blue400,
-              size: 22,
-              count: _cart.items.length,
-              textStyle: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              )),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () =>
+              store.navigator.routeManager.push(Uri.parse(MyRoutes.cartRoute)),
+          backgroundColor: context.theme.buttonColor,
+          child: Icon(
+            CupertinoIcons.cart,
+            color: Colors.white,
+          ),
         ),
         body: SafeArea(
           child: Container(
@@ -64,6 +56,11 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CatalogHeader(),
+                CupertinoSearchTextField(
+                  onChanged: (value) {
+                    SearchMutation(value);
+                  },
+                ).py12(),
                 if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                   CatalogList().py16().expand()
                 else

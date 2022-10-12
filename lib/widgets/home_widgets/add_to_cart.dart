@@ -20,7 +20,6 @@ class AddToCart extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {
         if (!isInCart) {
-          isInCart = isInCart.toggle();
           AddMutation(catalog);
         }
       },
