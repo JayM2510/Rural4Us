@@ -26,7 +26,7 @@ class CartPage extends StatelessWidget {
 class _CartTotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   final CartModel _cart =(VxState.store as MyStore).cart;
+    final CartModel _cart = (VxState.store as MyStore).cart;
     return SizedBox(
       height: 200,
       child: Row(
@@ -34,7 +34,7 @@ class _CartTotal extends StatelessWidget {
         children: [
           VxBuilder(
             mutations: {RemoveMutation},
-            builder: (context,_,status) {
+            builder: (context, _,status) {
               return "\$${_cart.totalPrice}"
                   .text
                   .xl5
@@ -64,7 +64,7 @@ class _CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     VxState.watch(context, on: [RemoveMutation]);
-    final CartModel _cart =(VxState.store as MyStore).cart;
+    final CartModel _cart = (VxState.store as MyStore).cart;
     return _cart.items.isEmpty
         ? "Nothing to show".text.xl3.makeCentered()
         : ListView.builder(
