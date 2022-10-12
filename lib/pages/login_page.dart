@@ -1,4 +1,5 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
+import 'package:flutter_catalog/core/store.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -19,7 +20,12 @@ class _LoginPageState extends State<LoginPage> {
         changeButton = true;
       });
       await Future.delayed(Duration(seconds: 1));
-      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      // await context.vxNav.push(Uri.parse(MyRoutes.homeRoute));
+      (VxState.store as MyStore)
+          .navigator
+          .routeManager
+          .push(Uri.parse(MyRoutes.homeRoute));
+
       setState(() {
         changeButton = false;
       });
@@ -84,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                           if (value!.isEmpty) {
                             return "Password cannot be empty";
                           } else if (value.length < 6) {
-                            return "Password length should be atleast 6 characters";
+                            return "Password length should be atleast 6";
                           }
 
                           return null;
@@ -105,19 +111,20 @@ class _LoginPageState extends State<LoginPage> {
                             height: 50,
                             alignment: Alignment.center,
                             child: changeButton
-                                ? Icon(
-                                    Icons.done,
-                                    color: Colors.white,
-                                  )
+                                ? Icon(Icons.done, color: Colors.white)
                                 : Text(
                                     "Login",
                                     style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18),
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
                                   ),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        height: 20.0,
                       ),
                     ],
                   ),
