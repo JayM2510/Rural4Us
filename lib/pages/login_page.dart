@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               children: [
                 Image.asset(
-                  "assets/images/login_image.png",
+                  "assets/images/local farmers market.jpg",
                   fit: BoxFit.cover,
                 ),
                 SizedBox(
@@ -100,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 40.0,
                       ),
                       Material(
-                        color: context.theme.buttonColor,
+                        color: Colors.brown,
                         borderRadius:
                             BorderRadius.circular(changeButton ? 50 : 8),
                         child: InkWell(
