@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 20.0,
                 ),
                 Text(
-                  "Welcome $name",
+                  "Welcome $name!",
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                           if (value!.isEmpty) {
                             return "Password cannot be empty";
                           } else if (value.length < 6) {
-                            return "Password length should be atleast 6";
+                            return "Password length should be atleast 6 characters";
                           }
 
                           return null;

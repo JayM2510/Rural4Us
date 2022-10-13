@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
           catalog: catalog,
         ));
       },
+    
       MyRoutes.loginRoute: (_, __) => MaterialPage(child: LoginPage()),
       MyRoutes.cartRoute: (_, __) => MaterialPage(child: CartPage()),
     });
