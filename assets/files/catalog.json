@@ -26,7 +26,7 @@
         },
         {
             "id": 4,
-            "name": "Madhubani painting",
+            "name": "Madhubani paintings",
             "desc": "Folk painting of the Bihar state of India",
             "price": 80,
             "color": "#544ee4",
@@ -46,7 +46,7 @@
             "desc": "Handmade by gifted artisans from Kashmir",
             "price": 200,
             "color": "#f73984",
-            "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-silver-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583551131102"
+            "image": "https://i.postimg.cc/GmYm2LJW/shawl.jpg"
         },
         {
             "id": 7,
@@ -54,7 +54,7 @@
             "desc": "Handmade folk embroidery of Punjab",
             "price": 55,
             "color": "#1c1c1c",
-            "image": "https://lh3.googleusercontent.com/qRQPjHrhRVIs-xnfNSyiPXOH2vH97ylMacgbTKebqJtRfNH3LlYo8pN-5igsLDWUH62tGl5zNpTsl5xd8SprzGmXoCEmWFOi2-2cQVGS-r3PaRXHt62DmJHq-jrYX0UQvWZ9BA=s800-c"
+            "image": "https://i.postimg.cc/N0FYXQ1G/Phulkari-Embroidery-Revival.jpg"
         },
         {
             "id": 8,
@@ -62,7 +62,7 @@
             "desc": "Decorative objects using seashells",
             "price": 99,
             "color": "#7c95eb",
-            "image": "https://images.samsung.com/is/image/samsung/p6pim/za/galaxy-s21/gallery/za-clear-cover-galaxy-s21-5g-ef-qg991ttegww-363168624?$720_576_PNG$"
+            "image": "https://i.postimg.cc/rFfPrxgW/Shell.jpg"
         }
     ]
 }
