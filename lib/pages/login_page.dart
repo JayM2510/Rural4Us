@@ -44,9 +44,10 @@ class _LoginPageState extends State<LoginPage> {
                 Image.asset(
                   "assets/images/local farmers market.jpg",
                   fit: BoxFit.cover,
+                  height: 380,
                 ),
                 SizedBox(
-                  height: 20.0,
+                  height: 40.0,
                 ),
                 Text(
                   "Welcome $name!",
@@ -65,8 +66,15 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       TextFormField(
                         decoration: InputDecoration(
+                           enabledBorder: UnderlineInputBorder(      
+                      borderSide: BorderSide(color: Colors.brown),   
+                      ),  
+                       focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.brown),
+                   ),  
                           hintText: "Enter username",
                           labelText: "Username",
+                          labelStyle: TextStyle(color: Colors.black),
                         ),
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -83,8 +91,15 @@ class _LoginPageState extends State<LoginPage> {
                       TextFormField(
                         obscureText: true,
                         decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(      
+                      borderSide: BorderSide(color: Colors.brown),   
+                      ),  
+                       focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.brown),
+                   ),  
                           hintText: "Enter password",
                           labelText: "Password",
+                          labelStyle: TextStyle(color: Colors.black),
                         ),
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -132,6 +147,7 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
           ),
-        ));
+        ),
+        );
   }
 }
