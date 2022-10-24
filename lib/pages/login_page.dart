@@ -43,8 +43,8 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Image.asset(
                   "assets/images/local farmers market.jpg",
-                  fit: BoxFit.cover,
-                  height: 380,
+                  fit: BoxFit.fill,
+                  height: 400,
                 ),
                 SizedBox(
                   height: 40.0,
@@ -65,13 +65,17 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     children: [
                       TextFormField(
+                        keyboardType: TextInputType.name,
                         decoration: InputDecoration(
-                           enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.brown),   
-                      ),  
-                       focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.brown),
-                   ),  
+                          prefixIcon: Icon(Icons.person, color: Colors.black,),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(color: Colors.brown ,width: 2.0),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(color: Colors.brown, width: 2.0),
+                          ),
                           hintText: "Enter username",
                           labelText: "Username",
                           labelStyle: TextStyle(color: Colors.black),
@@ -88,15 +92,22 @@ class _LoginPageState extends State<LoginPage> {
                           setState(() {});
                         },
                       ),
+                      SizedBox(
+                  height: 20.0,
+                ),
                       TextFormField(
                         obscureText: true,
                         decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.brown),   
-                      ),  
-                       focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.brown),
-                   ),  
+                          prefixIcon: Icon(Icons.lock, color: Colors.black,),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(color: Colors.brown ,width: 2.0),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(color: Colors.brown, width: 2.0),
+                          ),
+                        
                           hintText: "Enter password",
                           labelText: "Password",
                           labelStyle: TextStyle(color: Colors.black),
