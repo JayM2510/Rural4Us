@@ -9,6 +9,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool obscureText= true;
   String name = "";
   bool changeButton = false;
 
@@ -96,9 +97,18 @@ class _LoginPageState extends State<LoginPage> {
                   height: 20.0,
                 ),
                       TextFormField(
-                        obscureText: true,
+                        obscureText: obscureText,
                         decoration: InputDecoration(
                           prefixIcon: Icon(Icons.lock, color: Colors.black,),
+                          suffixIcon: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                obscureText = !obscureText;
+                                });
+                              },
+                              child: Icon(obscureText? 
+                              Icons.visibility: Icons.visibility_off, color: Colors.black,),
+                              ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15.0),
                             borderSide: BorderSide(color: Colors.brown ,width: 2.0),
