@@ -19,7 +19,7 @@ class SplashContent extends StatelessWidget {
           "Rural4Us!",
           style: TextStyle(
             fontSize: getProportionateScreenWidth(36),
-            color: Color.fromARGB(255, 255, 200, 1),
+            color: Colors.brown,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -30,8 +30,8 @@ class SplashContent extends StatelessWidget {
         Spacer(flex: 2),
         Image.asset(
           image!,
-          height: getProportionateScreenHeight(265),
-          width: getProportionateScreenWidth(235),
+          height: 370,
+          width: 455,
         ),
       ],
     );

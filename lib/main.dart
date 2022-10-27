@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
     var vxNavigator = VxNavigator(routes: {
       "/": (_, __) => MaterialPage(child: SplashScreen()),
       MyRoutes.homeRoute: (_, __) => MaterialPage(child: HomePage()),
+      MyRoutes.SplashScreenRoute: (_, __) => MaterialPage(child: SplashScreen()),
       MyRoutes.HomeDetailRoute: (uri, _) {
         final catalog = (VxState.store as MyStore)
             .catalog
