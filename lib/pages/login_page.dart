@@ -106,8 +106,8 @@ class _LoginPageState extends State<LoginPage> {
                                 obscureText = !obscureText;
                                 });
                               },
-                              child: Icon(obscureText? 
-                              Icons.visibility: Icons.visibility_off, color: Colors.black,),
+                              child: Icon(obscureText
+                              ? Icons.visibility: Icons.visibility_off, color: Colors.black,),
                               ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15.0),
@@ -146,6 +146,9 @@ class _LoginPageState extends State<LoginPage> {
                             width: changeButton ? 50 : 150,
                             height: 50,
                             alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25.0),
+                              ),
                             child: changeButton
                                 ? Icon(Icons.done, color: Colors.white)
                                 : Text(
