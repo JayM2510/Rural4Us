@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/constants.dart';
+import 'package:flutter_catalog/default_button.dart';
+import 'package:flutter_catalog/pages/login_page.dart';
 import 'package:flutter_catalog/size_config.dart';
 import '../components/splash_content.dart';
 
@@ -64,7 +66,12 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     Spacer(flex: 3),
-                    
+                    DefaultButton(
+                      text: "Continue",
+                      press: () {
+                        Navigator.pushNamed(context, );
+                      },
+                    ),
                     Spacer(),
                   ],
                 ),

@@ -19,7 +19,7 @@ class SplashContent extends StatelessWidget {
           "Rural4Us!",
           style: TextStyle(
             fontSize: getProportionateScreenWidth(36),
-            color: Colors.brown,
+            color: Color.fromARGB(255, 150, 75, 0),
             fontWeight: FontWeight.bold,
           ),
         ),

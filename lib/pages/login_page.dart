@@ -71,11 +71,11 @@ class _LoginPageState extends State<LoginPage> {
                           prefixIcon: Icon(Icons.person, color: Colors.black,),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15.0),
-                            borderSide: BorderSide(color: Colors.brown ,width: 2.0),
+                            borderSide: BorderSide(color: Color.fromARGB(255, 150, 75, 0) ,width: 2.0),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15.0),
-                            borderSide: BorderSide(color: Colors.brown, width: 2.0),
+                            borderSide: BorderSide(color: Color.fromARGB(255, 150, 75, 0), width: 2.0),
                           ),
                           hintText: "Enter username",
                           labelText: "Username",
@@ -111,11 +111,11 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15.0),
-                            borderSide: BorderSide(color: Colors.brown ,width: 2.0),
+                            borderSide: BorderSide(color:Color.fromARGB(255, 150, 75, 0) ,width: 2.0),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15.0),
-                            borderSide: BorderSide(color: Colors.brown, width: 2.0),
+                            borderSide: BorderSide(color: Color.fromARGB(255, 150, 75, 0), width: 2.0),
                           ),
                         
                           hintText: "Enter password",
@@ -136,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 40.0,
                       ),
                       Material(
-                        color: Colors.brown,
+                        color: Color.fromARGB(255, 150, 75, 0),
                         borderRadius:
                             BorderRadius.circular(changeButton ? 50 : 8),
                         child: InkWell(
