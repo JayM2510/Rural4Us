@@ -4,5 +4,4 @@ class MyRoutes{
   static String HomeDetailRoute = "/detail";
   static String cartRoute = "/cart";
   static String welcomescreenRoute = "/welcome";
-  static String SplashScreenRoute = "/splash";
 }

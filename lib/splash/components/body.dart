@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/constants.dart';
 import 'package:flutter_catalog/default_button.dart';
-import 'package:flutter_catalog/pages/login_page.dart';
 import 'package:flutter_catalog/size_config.dart';
+import 'package:flutter_catalog/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 import '../components/splash_content.dart';
 
 
@@ -69,7 +70,7 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                       text: "Continue",
                       press: () {
-                        Navigator.pushNamed(context, );
+                        context.vxNav.push(Uri(path: MyRoutes.loginRoute));
                       },
                     ),
                     Spacer(),
