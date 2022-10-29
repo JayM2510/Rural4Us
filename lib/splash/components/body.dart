@@ -14,18 +14,26 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   int currentPage = 0;
+  final pages = [
+    Container(
+      color: Color.fromARGB(255, 181, 101, 29),
+    ),
+    Container(
+      color: Color.fromARGB(255, 196, 164, 132),
+    ),
+  ];
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to Shopuify, Let’s shop!",
+      "text": "Find the Best Product you like.",
       "image": "assets/images/splash_1.png"
     },
     {
       "text":
-          "We help people connect with store \naround India!",
+          "Products are delivered home safely and securely.",
       "image": "assets/images/splash_2.png"
     },
     {
-      "text": "We show the easy way to shop. \nJust stay at home with us",
+      "text": "Easy and Secure Payment Method.",
       "image": "assets/images/splash_3.png"
     },
   ];

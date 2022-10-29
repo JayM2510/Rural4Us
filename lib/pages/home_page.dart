@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -73,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                     SearchMutation(value);
                   },
                 ).py12(),
-                if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+                if (CatalogModel.items !=null && CatalogModel.items.isNotEmpty)
                   CatalogList().py16().expand()
                 else
                   CircularProgressIndicator().centered().expand(),
