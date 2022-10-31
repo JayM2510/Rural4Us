@@ -7,7 +7,7 @@ class CatalogHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        "Rural4Us".text.xl5.bold.color(Colors.brown).make(),
+        "Rural4Us".text.xl5.bold.color(Color.fromARGB(255, 150, 75, 20)).make(),
         "Classic products".text.xl2.make(),
       ],
     );

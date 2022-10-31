@@ -43,9 +43,10 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               children: [
                 Image.asset(
-                  "assets/images/local farmers market.jpg",
-                  fit: BoxFit.fill,
-                  height: 400,
+                  "assets/images/ImageShop.png",
+                  fit: BoxFit.cover,
+                  height: 340,
+                  
                 ),
                 SizedBox(
                   height: 40.0,
@@ -133,21 +134,21 @@ class _LoginPageState extends State<LoginPage> {
                         },
                       ),
                       SizedBox(
-                        height: 40.0,
+                        height: 50.0,
                       ),
                       Material(
                         color: Color.fromARGB(255, 150, 75, 0),
                         borderRadius:
-                            BorderRadius.circular(changeButton ? 50 : 8),
+                            BorderRadius.circular(changeButton ? 100 : 20),
                         child: InkWell(
                           onTap: () => moveToHome(context),
                           child: AnimatedContainer(
                             duration: Duration(seconds: 1),
-                            width: changeButton ? 50 : 150,
+                            width: changeButton ? 250 : 450,
                             height: 50,
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(25.0),
+                              borderRadius: BorderRadius.circular(100.0),
                               ),
                             child: changeButton
                                 ? Icon(Icons.done, color: Colors.white)

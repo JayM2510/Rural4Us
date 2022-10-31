@@ -6,7 +6,7 @@
             "desc": "Object made from stone carving",
             "price": 99,
             "color": "#33505a",
-            "image": "https://i.postimg.cc/cCC4FzZM/SS.jpg"
+            "image": "https://m.media-amazon.com/images/I/7121wZ4G0pL.jpg"
         },
         {
             "id": 2,
@@ -14,15 +14,15 @@
             "desc": "Storage baskets made from bamboo",
             "price": 40,
             "color": "#00ac51",
-            "image": "https://i.postimg.cc/25YHnRFJ/Bamboobasket.webp"
+            "image": "https://didwblovvwmoz.cloudfront.net/product_images/1831337/1233283/live/featured_image/7e718fed8e4f7f4024b8ac04f098.jpeg?format=webp"
         },
         {
             "id": 3,
             "name": "Kolhapuri Chappals",
             "desc": "Leather Footwear from Maharashtra",
             "price": 60,
-            "color": "#e0bfae",
-            "image": "https://i.postimg.cc/XqXwS6b2/KChap.jpg"
+            "color": "#913709",
+            "image": "https://5.imimg.com/data5/SELLER/Default/2022/5/WD/TJ/YG/62900882/best-kolhapuri-chappals-1000x1000.jpg"
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "desc": "Folk painting of the Bihar state of India",
             "price": 80,
             "color": "#544ee4",
-            "image": "https://i.postimg.cc/MK91ZTT9/madBan.jpg"
+            "image": "https://m.media-amazon.com/images/I/71-SDhRUOOL._SL1000_.jpg"
         },
         {
             "id": 5,
@@ -38,7 +38,7 @@
             "desc": "Containers made of clay or mud",
             "price": 40,
             "color": "#e3e4e9",
-            "image": "https://i.postimg.cc/XYJ1nqf8/earthern.jpg"
+            "image": "https://www.foodandwine.com/thmb/Nw9DusBzx9RJfO0cd3-c9aXDSm4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/clay-pots-FT-MAG0320-9fd96c724ed84a4c99e9d0b75476c09e.jpg"
         },
         {
             "id": 6,
@@ -46,7 +46,7 @@
             "desc": "Handmade by gifted artisans from Kashmir",
             "price": 200,
             "color": "#f73984",
-            "image": "https://i.postimg.cc/GmYm2LJW/shawl.jpg"
+            "image": "https://as1.ftcdn.net/v2/jpg/00/46/35/92/1000_F_46359296_fDt7fa8PqXY8UTJikLAbWdRnZEaER1yw.jpg"
         },
         {
             "id": 7,
@@ -54,7 +54,7 @@
             "desc": "Handmade folk embroidery of Punjab",
             "price": 55,
             "color": "#1c1c1c",
-            "image": "https://i.postimg.cc/N0FYXQ1G/Phulkari-Embroidery-Revival.jpg"
+            "image": "https://www.caleidoscope.in/wp-content/uploads/2021/07/Phulkari-Embroidery-Revival.jpg"
         },
         {
             "id": 8,
@@ -62,7 +62,7 @@
             "desc": "Decorative objects using seashells",
             "price": 99,
             "color": "#7c95eb",
-            "image": "https://i.postimg.cc/rFfPrxgW/Shell.jpg"
+            "image": "https://www.dsource.in/sites/default/files/resource/seashell-craft-puri-orissa/products/minigallery/14515/02.jpg"
         }
     ]
 }
