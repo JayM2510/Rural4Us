@@ -14,26 +14,20 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   int currentPage = 0;
-  final pages = [
-    Container(
-      color: Color.fromARGB(255, 181, 101, 29),
-    ),
-    Container(
-      color: Color.fromARGB(255, 196, 164, 132),
-    ),
-  ];
-  List<Map<String, String>> splashData = [
+  List<Map<String, dynamic>> splashData = [
     {
-      "text": "Find the Best Product you like.",
+      "text": "Find the Best Product you like",
+      "subtitle": "Find your favourite & famous\n rural products that you are fond of.",
       "image": "assets/images/splash_1.png"
     },
     {
-      
-      "text":"Products are delivered home safely and securely.",
+      "text":"Products are delivered home\n safely and securely",
+      "subtitle": "Your products is delievered in your place\n quickely and free among locals.",
       "image": "assets/images/splash_2.png"
     },
     {
-      "text": "Easy and Secure Payment Method.",
+      "text": "Easy and Secure Payment Method",
+      "subtitle": "Pay for the prodcuts you buy\n safely & easily.",
       "image": "assets/images/splash_3.png"
     },
   ];
@@ -56,6 +50,7 @@ class _BodyState extends State<Body> {
                 itemBuilder: (context, index) => SplashContent(
                   image: splashData[index]["image"],
                   text: splashData[index]['text'],
+                  subtitle: splashData[index]['subtitle'],
                 ),
               ),
             ),

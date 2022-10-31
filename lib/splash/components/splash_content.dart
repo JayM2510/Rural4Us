@@ -5,10 +5,11 @@ import 'package:flutter_catalog/size_config.dart';
 class SplashContent extends StatelessWidget {
   const SplashContent({
     Key? key,
+    this.subtitle,
     this.text,
     this.image,
   }) : super(key: key);
-  final String? text, image;
+  final String? text, image, subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class SplashContent extends StatelessWidget {
       children: <Widget>[
         Spacer(),
         Text(
-          "Rural4Us!",
+          "Rural4Us",
           style: TextStyle(
             fontSize: getProportionateScreenWidth(36),
             color: Color.fromARGB(255, 150, 75, 0),
@@ -39,8 +40,9 @@ class SplashContent extends StatelessWidget {
             fontSize: 20,
           ),
         ),
+        SizedBox(height: 5),
         Text(
-          "Find your favourite & famous\n rural products that you are fond of",
+          subtitle!,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontWeight: FontWeight.w400,
