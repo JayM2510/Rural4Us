@@ -15,11 +15,6 @@ class SplashContent extends StatelessWidget {
     return Column(
       children: <Widget>[
         Spacer(),
-        Image.asset(
-          image!,
-          height: 370,
-          width: 455,
-        ),
         Text(
           "Rural4Us!",
           style: TextStyle(
@@ -28,14 +23,30 @@ class SplashContent extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        Text(
+        Spacer(flex: 2),
+        Image.asset(
+          image!,
+          height: 370,
+          width: 455,
+        ),
+            Text(
           text!,
-          textAlign: TextAlign.left,
+          
+          textAlign: TextAlign.center,
           style: TextStyle(
+            color: Color.fromARGB(255, 150, 75, 20),
             fontWeight: FontWeight.bold,
+            fontSize: 20,
           ),
         ),
-        Spacer(flex: 2),
+        Text(
+          "Find your favourite & famous\n rural products that you are fond of",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 14,
+          ),
+        ),
       ],
     );
   }
