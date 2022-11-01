@@ -7,7 +7,6 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.canvasColor,
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 150, 75, 20),
         title: "Cart".text.make(),
@@ -32,12 +31,19 @@ class _CartTotal extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          Text(
+                  "Total:",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
           VxBuilder(
             mutations: {RemoveMutation},
             builder: (context, _,status) {
               return "\$${_cart.totalPrice}"
                   .text
-                  .xl5
+                  .xl4
                   .color(context.theme.accentColor)
                   .make();
             },
@@ -51,7 +57,11 @@ class _CartTotal extends StatelessWidget {
             },
             style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(context.theme.buttonColor)),
+                    MaterialStateProperty.all(context.theme.buttonColor),
+                    elevation: MaterialStateProperty.all(10),
+                    shape: MaterialStateProperty.resolveWith<OutlinedBorder>((_) {
+        return RoundedRectangleBorder(borderRadius: BorderRadius.circular(15));
+      }),),
             child: "Buy".text.white.make(),
           ).w32(context)
         ],
@@ -75,6 +85,7 @@ class _CartList extends StatelessWidget {
                 icon: Icon(Icons.remove_circle_outline),
                 onPressed: () => RemoveMutation(_cart.items[index]),
               ),
+
               title: _cart.items[index].name.text.make(),
             ),
           );
