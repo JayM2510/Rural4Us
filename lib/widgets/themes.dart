@@ -8,8 +8,8 @@ class MyTheme {
       fontFamily: GoogleFonts.poppins().fontFamily,
       cardColor: Colors.white,
         canvasColor: creamColor,
-        buttonColor: darkBluishColor,
-        accentColor: darkBluishColor,
+        buttonColor: Color.fromARGB(255, 150, 75, 20),
+        accentColor: Color.fromARGB(255, 150, 75, 20),
       appBarTheme: AppBarTheme(
         color: Colors.white,
         elevation: 0.0,
@@ -22,8 +22,8 @@ class MyTheme {
   fontFamily: GoogleFonts.poppins().fontFamily,
       cardColor: Colors.black,
         canvasColor: darkCreamColor,
-        buttonColor: lightBluishColor,
-        accentColor: Colors.white,
+        buttonColor: Color.fromARGB(255, 150, 75, 20),
+        accentColor: Color.fromARGB(255, 150, 75, 20),
       appBarTheme: AppBarTheme(
         color: Colors.black,
         elevation: 0.0,
