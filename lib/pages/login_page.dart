@@ -41,20 +41,35 @@ class _LoginPageState extends State<LoginPage> {
           child: Form(
             key: _formKey,
             child: Column(
-              children: [
+              children: [ 
                 Image.asset(
                   "assets/images/ImageShop.png",
                   fit: BoxFit.cover,
-                  height: 340,
-                  
+                  height: 300,
+                  width: 500,  
                 ),
-                SizedBox(
-                  height: 40.0,
+                 SizedBox(
+                  height: 10.0,
+                ),
+            Align(
+            alignment: Alignment.center,
+            child: Text(
+              'Login',
+              style: TextStyle(
+                color: Color.fromARGB(255, 150, 75, 20),
+                fontFamily: "Open Sans",
+                fontSize: 60,
+                fontWeight: FontWeight.bold,
+                ),
+            ),
+          ),
+          SizedBox(
+                  height: 10.0,
                 ),
                 Text(
                   "Welcome $name!",
                   style: TextStyle(
-                    fontSize: 28,
+                    fontSize: 22,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -133,7 +148,7 @@ class _LoginPageState extends State<LoginPage> {
                           return null;
                         },
                       ),
-                      SizedBox(
+                       SizedBox(
                         height: 50.0,
                       ),
                       Material(
@@ -163,6 +178,12 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
+                        Text(
+                  "Please login to continue using our app.",
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                ),
                       SizedBox(
                         height: 20.0,
                       ),

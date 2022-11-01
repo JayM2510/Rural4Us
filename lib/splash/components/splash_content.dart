@@ -27,12 +27,12 @@ class SplashContent extends StatelessWidget {
         Spacer(flex: 2),
         Image.asset(
           image!,
-          height: 370,
+          height: 353,
           width: 455,
         ),
+        SizedBox(height: 3),
             Text(
           text!,
-          
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Color.fromARGB(255, 150, 75, 20),
@@ -40,7 +40,7 @@ class SplashContent extends StatelessWidget {
             fontSize: 20,
           ),
         ),
-        SizedBox(height: 5),
+        SizedBox(height: 3),
         Text(
           subtitle!,
           textAlign: TextAlign.center,
