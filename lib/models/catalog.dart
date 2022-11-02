@@ -4,7 +4,7 @@ import 'package:flutter_catalog/core/store.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CatalogModel {
-   static late List<Item> items;
+  static  List<Item> items = [];
 
   // Get Item by ID
   Item getById(int id) =>
