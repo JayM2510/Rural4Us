@@ -21,14 +21,15 @@ class _BodyState extends State<Body> {
       "image": "assets/images/splash_1.png"
     },
     {
-      "text":"Products are delivered home\n safely and securely",
-      "subtitle": "Your products is delievered in your place\n quickely and free among locals.",
-      "image": "assets/images/splash_2.png"
-    },
-    {
       "text": "Easy and Secure Payment Method",
       "subtitle": "Pay for the prodcuts you buy\n safely & easily.",
       "image": "assets/images/splash_3.png"
+    },
+    
+    {
+      "text":"Products are delivered home\n safely and securely",
+      "subtitle": "Your products is delievered in your place\n quickely and free among locals.",
+      "image": "assets/images/splash_2.png"
     },
   ];
   @override
