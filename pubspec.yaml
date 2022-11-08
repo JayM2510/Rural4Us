@@ -44,8 +44,16 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.10.0
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/Rural4us.png"
+  adapative_icon_foreground: "assets/images/ImageShop2.png"
+  adapative_icon_background: "#ffffff"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
