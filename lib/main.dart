@@ -3,14 +3,22 @@ import 'package:flutter_catalog/core/store.dart';
 import 'package:flutter_catalog/pages/cart_page.dart';
 import 'package:flutter_catalog/pages/home_detail_page.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
+import 'package:flutter_catalog/pages/sign_up_page.dart';
 import 'package:flutter_catalog/splash/splash_screen.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'pages/home_page.dart';
 import 'widgets/themes.dart';
 import 'package:url_strategy/url_strategy.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   setPathUrlStrategy();
   runApp(VxState(store: MyStore(), child: MyApp()));
 }
@@ -31,9 +39,9 @@ class MyApp extends StatelessWidget {
         ),
         );
       },
-    
       MyRoutes.loginRoute: (_, __) => MaterialPage(child: LoginPage()),
       MyRoutes.cartRoute: (_, __) => MaterialPage(child: CartPage()),
+      MyRoutes.signupRoute: (_, __) => MaterialPage(child: MyRegister()),
     });
     (VxState.store as MyStore).navigator = vxNavigator;
 
