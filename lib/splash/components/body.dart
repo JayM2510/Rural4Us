@@ -40,7 +40,7 @@ class _BodyState extends State<Body> {
         child: Column(
           children: <Widget>[
             Expanded(
-              flex: 5,
+              flex: 6,
               child: PageView.builder(
                 onPageChanged: (value) {
                   setState(() {
@@ -59,25 +59,32 @@ class _BodyState extends State<Body> {
               flex: 2,
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(20)),
+                  horizontal: getProportionateScreenWidth(20),
+                ),
                 child: Column(
                   children: <Widget>[
-                    Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
-                        splashData.length,
-                        (index) => buildDot(index: index),
+                    Expanded( // Add an Expanded widget here
+                      child: Column(
+                        children: <Widget>[
+                          Spacer(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: List.generate(
+                              splashData.length,
+                              (index) => buildDot(index: index),
+                            ),
+                          ),
+                          Spacer(flex: 3),
+                          DefaultButton(
+                            text: "Continue",
+                            press: () {
+                              context.vxNav.push(Uri(path: MyRoutes.loginRoute));
+                            },
+                          ),
+                          Spacer(),
+                        ],
                       ),
                     ),
-                    Spacer(flex: 3),
-                    DefaultButton(
-                      text: "Continue",
-                      press: () {
-                        context.vxNav.push(Uri(path: MyRoutes.loginRoute));
-                      },
-                    ),
-                    Spacer(),
                   ],
                 ),
               ),
