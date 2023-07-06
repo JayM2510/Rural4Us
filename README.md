@@ -8,12 +8,14 @@
 ## 📱The App:
 An E-commerce application built using Flutter Framework. Aimed at providing an immersive and unique experience that makes online shopping of famous rural items a much simpler and seamless process. I have also used VelcityX management state which is a minimalist Flutter framework inspired from TailwindCSS and SwiftUI for rapidly building flutter apps .
 
-The App will contain a few components: OnBoarding Screen(Splash Screen),Login Screen, Home Screen(Product Listing Screen), Product Details Screen with dummy text description, Add to Cart Screen (Ordering Process).
+The App will contain a few components: OnBoarding Screen(Splash Screen),SignIn & SignUp Screen, Home Screen(Product Listing Screen), Product Details Screen with dummy text description, Add to Cart Screen (Ordering Process).
 
  ## 💭Features:
 🎯Easy login & registration
 
 🎯User-friendly product searching and sorting
+
+🎯E-mail,Password and Google SignIn Firebase authentication
 
 🎯Product gallery
 
@@ -26,12 +28,18 @@ Onboarding Screen gives a short overview of an app. This Screen consists of thre
 | :--------------------------------:       | :---------------------------------------: | :----------------------------------:     |
 |                Layout 1                  |                 Layout 2                  |                  Layout 3                |  
 
-## 🔐LogIn Screen:
-The login screen I have build here is simple in its visual aspects. First there is a container widget for the image. Then about the screen itself, Login and Welcome!.  Now, we have two text form fields, user name and password, to get login/sign-in credentials from user. After that, there is an Animated container widget for the Login button which on tap shows animation before being navigated to the home screen.
+## 🔐SignIn and SignUp Screen:
+The login screen I have built is visually simple and welcoming. It features a username and password text field for users to enter their login credentials. Additionally, there is a signup page for new users to create an account.
+To ensure security, the screen uses Firebase Authentication, supporting email and password login. Tapping the animated Login button initiates an engaging animation before seamlessly navigating users to the home screen.
 
-| ![](assets/images/1667832685083_100.PNG) | ![](assets/images/1667832679505_100.PNG)  | 
-| :--------------------------------:       | :---------------------------------------: | 
-|             Without credentials          |             With Credentials              |    
+
+|    Login Page(Without credentials)       |            With Credentials               | 
+|    :--------------------------------:    |    :--------------------------------:     |
+| ![](assets/images/1688642325983_100.PNG) | ![](assets/images/1688642342749_100.PNG)  |
+|  SignUp Page(Without Credentials)        |              With Credentials             |
+| ![](assets/images/1688642333427_100.PNG) | ![](assets/images/1688642338422_100.PNG)  |
+
+
 
 ## 🔎Home Screen:
 This screen shows all the products with their name, image, and price. Here you can search for the products or scroll down to view more items. On tapping the item, it opens the product details page.The badge widget is also used here which added from the library called Badges. This automatically animates the badge when the value is updated.
